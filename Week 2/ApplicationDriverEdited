@@ -1,12 +1,19 @@
 public class ApplicationDriver {
     public static void main(String[] args) {
-        Person tania = new Person();
+        Person bob = new Person();
 
-        tania.setAge(21);
-        System.out.println("Tania is " + tania.getAge() + " years old.");
 
-        tania.setName("FakeNews");
-        System.out.println(tania.getName());
+        bob.setAge(150);
+        if (bob.getAge() == 0)
+        System.out.println("Invalid age");
+        else
+        System.out.println( bob.getAge() + " years old.");
+
+        bob.setName("Ned Flanders");
+        System.out.println(bob.getName());
+
+        bob.setHeight("6'11");
+        System.out.println(bob.getHeight());
 
     }
 }
