@@ -1,8 +1,9 @@
 public class Person {
     private int age;
     private String name;
+    private String height;
 
-    public void setAge(int newAge){
+    public void setAge(int newAge) {
         if (newAge > 0 && newAge <= 120)
             age = newAge;
     }
@@ -11,7 +12,7 @@ public class Person {
         return age;
     }
 
-    public void setName(String newName) {
+    public void setName(String newName){
         if (newName.length() >= 0 && newName.length() <= 20)
             name = newName;
     }
@@ -19,6 +20,17 @@ public class Person {
     public String getName(){
         return name;
     }
+
+    public void setHeight(String newHeight) {
+        if (newHeight.length() >= 0 && newHeight.length() <= 20)
+            height = newHeight;
+    }
+
+    public String getHeight(){
+        return height;
+    }
+
+
 }
 
 
