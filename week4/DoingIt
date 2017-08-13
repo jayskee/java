@@ -1,0 +1,415 @@
+package week04;
+
+/**
+ * Created by shuxford on 25/12/2015.
+ */
+public class DoingIt {
+    Window myWindow;
+
+    public void doIt(Window win){
+        myWindow = win;
+
+        //ex13();
+        ex14();
+        //ex22();
+        //ex23();
+        //ex24();
+        //ex25();
+        //ex26();
+        //ex28();
+        //ex29();
+
+        //assignmentIsAnOperator();
+        //arithmeticOperations();
+        //equalityRelationalOperators();
+        //equalityRelationalOperators2();
+        //logicalOperators();
+        //redundantSyntax();
+        //blockScopeTest();
+    }
+
+    //LAB EXERCISES for you to code
+    private void ex13(){
+
+        boolean a = true;
+        boolean b = false;
+
+        a=!a;
+        b=!b;
+
+
+        myWindow.clearOut();
+        myWindow.writeOutLine(a);
+        myWindow.writeOutLine(b);
+    }
+
+    private void ex14(){
+        int a, b, c;
+        double discriminant, num1, num2, denominator, root1, root2;
+
+        a = 5;
+        b = 6;
+        c = 1;
+
+        discriminant = (double) b * b - 4 * a * c;
+        denominator= (double) 1 / (2 * a);
+        num1 = -b + Math.sqrt(discriminant);
+        num2 = -b - Math.sqrt(discriminant);
+        root1 = num1 * denominator;
+        root2 = num2 * denominator;
+        myWindow.clearOut();
+        myWindow.writeOutLine("x = " + root1 + " or " + root2);
+
+        // Credits to: https://www.mathsisfun.com/algebra/quadratic-equation.html
+        // For showing me what a quadratic equation is and how to go about working it out
+    }
+
+    private void ex22(){
+
+        myWindow.clearOut();
+
+        int n;
+        boolean result;
+
+        n = 1900;
+        result = (n % 2 == 0);
+        myWindow.writeOutLine("Is " + n + " even? - " + result);
+
+        n = 1337;
+        result = (n % 2 == 0);
+        myWindow.writeOutLine("Is " + n + " even? - " + result);
+
+        n = 5432;
+        result = (n % 2 == 0);
+        myWindow.writeOutLine("Is " + n + " even? - " + result);
+
+        n = 9999;
+        result = (n % 2 == 0);
+        myWindow.writeOutLine("Is " + n + " even? - " + result);
+
+    }
+
+    private void ex23(){
+
+        myWindow.clearOut();
+
+        int n;
+        boolean result;
+
+        n = 999;
+        result = (n % 2 != 0 && n < 0);
+        myWindow.writeOutLine("Is " + n + " a negative odd number? - " + result);
+
+        n = -999;
+        result = (n % 2 != 0 && n < 0);
+        myWindow.writeOutLine("Is " + n + " a negative odd number? - " + result);
+
+        n = -5;
+        result = (n % 2 != 0 && n < 0);
+        myWindow.writeOutLine("Is " + n + " a negative odd number? - " + result);
+
+        n = -10;
+        result = (n % 2 != 0 && n < 0);
+        myWindow.writeOutLine("Is " + n + " a negative odd number? - " + result);
+
+        n = 0;
+        result = (n % 2 != 0 && n < 0);
+        myWindow.writeOutLine("Is " + n + " a negative odd number? - " + result);
+
+
+
+    }
+
+    private void ex24(){
+
+        myWindow.clearOut();
+
+        int n;
+        boolean step1, step2, step3, step4, result;
+
+        n = 43;
+
+        step1 = (n >= 1 && n <= 100);                           // Checks if between 1-100
+        step2 = (n < 40 || n > 50);                             // Checks if less than 40 and more than 50
+        step3 = (n >= 40 && n <= 50);                           // If between 40 and 50 then next step will check odd/even
+        step4 = (step3 && n % 2 != 0);                          // If remainder = odd, therefore result is true
+
+        result = (step1 && step2 || step1 && step3 && step4);
+        myWindow.writeOutLine("Is " + n + " between 1-100 and NOT an even number between 40 and 50? - " + result);
+
+        n = 101;
+
+        step1 = (n >= 1 && n <= 100);                           // Checks if between 1-100
+        step2 = (n < 40 || n > 50);                             // Checks if less than 40 and more than 50
+        step3 = (n >= 40 && n <= 50);                           // If between 40 and 50 then next step will check odd/even
+        step4 = (step3 && n % 2 != 0);                          // If remainder = odd, therefore result is true
+
+        result = (step1 && step2 || step1 && step3 && step4);
+        myWindow.writeOutLine("Is " + n + " between 1-100 and NOT an even number between 40 and 50? - " + result);
+
+        n = 44;
+
+        step1 = (n >= 1 && n <= 100);                           // Checks if between 1-100
+        step2 = (n < 40 || n > 50);                             // Checks if less than 40 and more than 50
+        step3 = (n >= 40 && n <= 50);                           // If between 40 and 50 then next step will check odd/even
+        step4 = (step3 && n % 2 != 0);                          // If remainder = odd, therefore result is true
+
+        result = (step1 && step2 || step1 && step3 && step4);
+        myWindow.writeOutLine("Is " + n + " between 1-100 and NOT an even number between 40 and 50? - " + result);
+
+        n = 66;
+
+        step1 = (n >= 1 && n <= 100);                           // Checks if between 1-100
+        step2 = (n < 40 || n > 50);                             // Checks if less than 40 and more than 50
+        step3 = (n >= 40 && n <= 50);                           // If between 40 and 50 then next step will check odd/even
+        step4 = (step3 && n % 2 != 0);                          // If remainder = odd, therefore result is true
+
+        result = (step1 && step2 || step1 && step3 && step4);
+        myWindow.writeOutLine("Is " + n + " between 1-100 and NOT an even number between 40 and 50? - " + result);
+
+    }
+
+    private void ex25(){
+
+        myWindow.clearOut();
+
+        String input, s1 = "y", s2 = "Y", s3 = "n", s4 = "N";
+        boolean result;
+
+        input = myWindow.readIn();
+        result = input.equals(s1) || input.equals(s2) || input.equals(s3) || input.equals(s4);
+        myWindow.writeOutLine("Did you enter y, Y, n, N? - " + result);
+
+
+    }
+
+    private void ex26(){
+
+        myWindow.clearOut();
+
+        String userInput;
+        boolean result;
+
+        userInput = myWindow.readIn();
+        result = !userInput.equals("done");
+
+        myWindow.clearOut();
+        myWindow.writeOutLine("Was done NOT entered? - " + result);
+
+    }
+
+    private void ex28(){
+
+        int year = 2400;
+        boolean result, century, hundred;
+        result = year % 4 == 0;
+        century = year % 400 == 0;              // Checks to see if it's a century year (2100, 2400 etc)
+                                                // Century is only a leap year if divisible by 4
+        hundred = year % 100 != 0;               // Years that are divisible by 100 are not leap years
+
+        myWindow.clearOut();
+        myWindow.writeOutLine("Is " + year + " a leap year? - " + (result && century || hundred));
+
+        // Credits once again to: https://www.mathsisfun.com/leap-years.html
+        // For information on leap years and the formula required
+    }
+
+        // Some extra practice
+
+    private void ex29()
+    {
+        int year = 2014;
+        boolean result, result2;
+
+        result = year != 2015 && year != 2016;
+        result2 = year < 2015 || year > 2016;
+
+        myWindow.clearOut();
+        myWindow.writeOutLine(result);
+        myWindow.writeOutLine(result2);
+
+
+    }
+
+    //WORKSHOP CODE for you to play with
+    private void assignmentIsAnOperator(){
+        int testInt;
+        myWindow.clearOut();
+        myWindow.writeOutLine(testInt = 123);
+    }
+
+    private void arithmeticOperations(){
+        //using literals to keep things clear but could have used variables
+        int i1, i2, i3; //these are reused multiple times for multiple uses in this method which is poor style in real code
+
+        myWindow.clearOut();
+
+        myWindow.writeOutLine(1.0 / 2.0);
+        myWindow.writeOutLine(1 / 2);
+        myWindow.writeOutLine((double) 1 / 2);
+
+        myWindow.writeOutLine(7 % 3);
+        myWindow.writeOutLine(7 % 8);
+
+//        int counter = 0;
+//        counter = counter + 1;
+//        ++counter; //pre increment
+//        counter++; //post increment
+//
+//        counter = counter - 1;
+//        --counter; //pre decrement
+//        counter--; //post decrement
+
+        myWindow.writeOutLine("");
+        i1 = 1; i2 = 2;
+        myWindow.writeOutLine(i1 + ++i2);
+        i1 = 1; i2 = 2;
+        myWindow.writeOutLine(i1 + i2++);
+        i1 = 1; i2 = 2;
+        myWindow.writeOutLine(i1 + --i2);
+        i1 = 1; i2 = 2;
+        myWindow.writeOutLine(i1 + i2--);
+
+        double totalSales = 0, thisSale;
+        thisSale = 5.50;
+        totalSales += thisSale;
+        myWindow.writeOutLine(totalSales);
+        thisSale = 7.50;
+        totalSales += thisSale;
+        myWindow.writeOutLine(totalSales);
+
+//        totalSales = totalSales + thisSale;
+//        totalSales += thisSale;
+
+        myWindow.writeOutLine("");
+        double pi = Math.PI;                        //no parenthesis after PI ???
+        myWindow.writeOutLine(Math.floor(pi));
+        myWindow.writeOutLine(Math.pow(2.0, 20));   //1MByte
+        //double calculations are inaccurate
+        myWindow.writeOutLine(Math.sin(2.0 * pi));
+        myWindow.writeOutLine(Math.abs(-pi));
+
+        myWindow.writeOutLine("");
+
+        i1 = 1; i2 = 2; i3 = 3;
+
+        myWindow.writeOutLine(i1 + i2 * i3);
+        myWindow.writeOutLine((i1 + i2) * i3);
+    }
+
+    private void equalityRelationalOperators(){
+        double d1 = 1.23, d2 = 3.45;
+        double delta = 0.00000001;
+        String s1 = "dog", s2;
+
+        s2 = myWindow.readIn(); //assume the string dog is input
+
+        myWindow.clearOut();
+        //remember floating points are stored inaccurately
+        myWindow.writeOutLine("d1 == d2: " + (d1 == d2));   //false, maybe
+        myWindow.writeOutLine("d1 != d2: " + (d1 != d2));   //true, maybe
+        //inner parentheses essential in the next statement. Why?
+        myWindow.writeOutLine("d1 < d2: " + (d1 < d2));     //true, maybe
+        myWindow.writeOutLine("d1 <= d1: " + (d1 <= d1));   //true, maybe
+
+        //allowing for floating point inaccuracy
+        myWindow.writeOutLine((d2 - d1) < delta);
+
+        myWindow.writeOutLine("s1 == s2: " + (s1 == s2));   //false, huh!!!
+
+
+    }
+
+    private void equalityRelationalOperators2(){
+
+        String s1 = "dog", s2, s3 = "dOg", s4 = "dogs)";
+
+        s2 = myWindow.readIn(); //the string dog is input
+
+        myWindow.clearOut();
+        myWindow.writeOutLine("s1.equals(s2): " + s1.equals(s2));   //hooray!
+        myWindow.writeOutLine("!s1.equals(s2): " + !s1.equals(s2)); //
+        myWindow.writeOutLine("s1.equals(s3): " + s1.equals(s3));   //case sensitive
+        //next statement: true, case insensitive
+        myWindow.writeOutLine("s1.equalsIgnoreCase(s3): " + s1.equalsIgnoreCase(s3));
+
+        myWindow.writeOutLine("s1.compareTo(s4): " + s1.compareTo(s4));  // -ve
+        myWindow.writeOutLine("s4.compareTo(s1): " + s4.compareTo(s1));  // +ve
+        myWindow.writeOutLine("s1.compareTo(s2): " + s1.compareTo(s2));  // 0
+
+        myWindow.writeOutLine("s1.compareTo(s3): " + s1.compareTo(s3));  // +ve
+        //next statement: 0 i.e. s1 = s2
+        myWindow.writeOutLine("s1.compareToIgnoreCase(s3): " + s1.compareToIgnoreCase(s3));
+
+    }
+
+    private void logicalOperators(){
+
+        int low = 50, high = 100; //inclusive
+        int testValue1 = 99, testValue2 = 101;
+        boolean firstTest, secondTest;
+
+        myWindow.clearOut();
+
+        firstTest = testValue1 >= low && testValue1 <= high; //in test
+        secondTest = testValue1 < low || testValue1 > high; //out test
+        myWindow.writeOutLine("testValue1 in range: " + firstTest);
+        myWindow.writeOutLine("testValue1 out of range: " + secondTest);
+
+        myWindow.writeOutLine("");
+        firstTest = testValue2 >= low && testValue2 <= high; //in test
+        secondTest = testValue2 < low || testValue2 > high; //out test
+        myWindow.writeOutLine("testValue2 in range: " + firstTest);
+        myWindow.writeOutLine("testValue2 out of range: " + secondTest);
+    }
+
+    private void redundantSyntax(){
+        boolean myBoolean = true;
+        boolean result;
+
+        result = myBoolean = true;
+        result = myBoolean != true;
+    }
+
+    private void blockScopeTest(){
+        int outer = 1;
+
+        myWindow.clearOut();
+
+        myWindow.writeOutLine("outer: " + outer);
+        //myWindow.writeOutLine("inner1: " + inner1); //inner1 not in scope
+        //myWindow.writeOutLine("inner2: " + inner2); //inner2 not in scope
+        {
+            int inner1 = 2;
+            myWindow.writeOutLine("outer: " + outer);
+            myWindow.writeOutLine("inner1: " + inner1);
+            //myWindow.writeOutLine("inner2: " + inner2); //inner2 not in scope
+
+        }
+
+        {
+            int inner2 =3;
+            myWindow.writeOutLine("outer: " + outer);
+            //myWindow.writeOutLine("inner1: " + inner1); //inner1 not in scope
+            myWindow.writeOutLine("inner2: " + inner2);
+        }
+    }
+
+
+
+    // =========================================================================
+    // UTILITIES ===============================================================
+    // =========================================================================
+    private static boolean isNumeric(String str){
+        return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
+    }
+
+    private static int getRandom(int n1, int n2){
+        int retVal = 0;
+
+        retVal = n1 + (int) Math.floor(Math.random() * (n2 - n1 + 1));
+
+        return retVal;
+    }
+
+}
